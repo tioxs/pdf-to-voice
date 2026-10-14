@@ -2,7 +2,7 @@
 
 PDF’lerini dinle, kaldığın kelimeden devam et. macOS için sade, yerel bir sesli okuma uygulaması.
 
-![Uygulamanın önceki sürümünden görünüm](docs/ss.png)
+![Uygulamanın önceki sürümünden görünüm](docs/ss.v030.png)
 
 ## ✨ Özellikler
 
