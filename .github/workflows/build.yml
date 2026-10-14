@@ -1,0 +1,17 @@
+name: Build and check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reader regression checks
+        run: zsh scripts/test.sh
+      - name: Universal app
+        run: zsh scripts/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PDF-to-Voice-universal
+          path: dist/PDF-to-Voice.zip

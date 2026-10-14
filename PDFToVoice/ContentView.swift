@@ -43,7 +43,7 @@ struct ContentView: View {
             allowsMultipleSelection: false,
             onCompletion: handleImport
         )
-        .alert("PDF Açılamadı", isPresented: errorBinding) {
+        .alert("İşlem Tamamlanamadı", isPresented: errorBinding) {
             Button("Tamam", role: .cancel) {}
         } message: {
             Text(reader.errorMessage ?? "Bilinmeyen hata")
@@ -52,14 +52,14 @@ struct ContentView: View {
 
     private var emptyState: some View {
         VStack(spacing: 16) {
-                Image(systemName: "doc.text")
-                .font(.system(size: 52, weight: .light))
-                .foregroundStyle(.secondary)
+                Image(systemName: "waveform.circle.fill")
+                .font(.system(size: 76, weight: .light))
+                .foregroundStyle(Color.accentColor)
 
-            Text("Pdf//Voice")
+            Text("pdf/voice")
                 .font(.largeTitle.weight(.semibold))
 
-            Text("Bir PDF seç ve metni dinlemeye başla.")
+            Text("Belgelerini dinle. Kaldığın yerden devam et.")
                 .font(.title3)
                 .foregroundStyle(.secondary)
 
@@ -108,7 +108,7 @@ struct ContentView: View {
     }
 
     private var appVersion: String {
-        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.2.2"
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.3.0"
     }
 
     private var errorBinding: Binding<Bool> {

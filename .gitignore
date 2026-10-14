@@ -5,3 +5,20 @@ dist/
 *.xcuserstate
 xcuserdata/
 .swiftpm/
+
+# Local configuration and signing credentials
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
+
+# Editor and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.log
